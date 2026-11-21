@@ -1,38 +1,63 @@
-# AroMaa - Food Recipes App (Next.js 15)
+# AroMaa – Food Recipes App
 
-**Tech Stack**: Next.js 15, Tailwind CSS, Shadcn/UI, DummyJSON API  
+A responsive food recipe app built with **Next.js 15** and **React 19**, using the [DummyJSON](https://dummyjson.com/docs/recipes) recipes API as its data source.
 
-**AroMaa** is a cutting-edge, responsive food recipe app leveraging the latest web technologies for superior performance, accessibility, and SEO.  
+[![Live demo](https://img.shields.io/badge/demo-live-brightgreen?logo=vercel)](https://aroma-shardul.vercel.app/)
+![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-components-000000)
 
----
+**Live demo:** https://aroma-shardul.vercel.app/
 
-## **Key Features**  
-- **ISR (Incremental Static Regeneration)**: Ensures fast builds and fresh content without requiring full rebuilds.  
-- **Streaming with Suspense**: Enables progressive data rendering for a seamless user experience.  
-- **Server-Side URL-Based Pagination & Filtering**: Optimized for large recipe collections with shareable, SEO-friendly URLs.  
-- **Bookmarkable URLs**: Easily share specific filtered views or recipes.  
-- **Latest Async Request API**: Efficiently handles `params` and `searchParams`.  
-- **React 19**: Built on the latest React version for modern capabilities.  
-- **Next Font**: Provides performance-optimized typography.  
-- **Dynamic Sitemap Generation**: Automatically creates up-to-date sitemaps for search engines.  
-- **Static and Dynamic Metadata Generation**: Enhances SEO and social sharing with auto-generated metadata.  
-- **URL-Based State Management**: Allows bookmarking and sharing specific filters and views.  
-- **Best Web Vitals Scores (Lighthouse)**: Exceptional performance metrics verified by Lighthouse.  
-- **Fully Mobile-Responsive Design**: Optimized for all screen sizes and devices.  
+## Features
 
----
+- **Incremental Static Regeneration (ISR)** – fast pages with content that refreshes without a full rebuild.
+- **Streaming with Suspense** – progressive rendering with skeleton loading states.
+- **Server-side, URL-based pagination, search and filtering** – shareable, bookmarkable, SEO-friendly URLs.
+- **Browse by tag** – dedicated pages for recipe tags, plus a trending recipes section.
+- **Async request APIs** – uses the latest Next.js handling of `params` and `searchParams`.
+- **SEO** – dynamic sitemap, `robots.txt`, and static and dynamic metadata with Open Graph images.
+- **`next/font`** for performance-optimised typography.
+- **Dark and light themes** via `next-themes`.
+- **Fully responsive** design for mobile, tablet and desktop.
 
-## **Themes**  
-The app supports both **Dark** and **Light** themes, providing a user-friendly, accessible interface.  
+## Tech stack
 
----
+- [Next.js 15](https://nextjs.org/) (App Router) and React 19
+- TypeScript
+- Tailwind CSS
+- [shadcn/ui](https://ui.shadcn.com/) components built on Radix UI, with Lucide icons
+- [DummyJSON](https://dummyjson.com/) recipes API
 
-## **Responsiveness**  
-AroMaa is fully optimized for all screen sizes, ensuring a seamless experience across devices.  
+## Getting started
 
----
+```bash
+git clone https://github.com/sharky412/Aroma.git
+cd Aroma
+npm install
+npm run dev
+```
 
-**Built with**:  
-- **Next.js 15** for unmatched performance.  
-- **Tailwind CSS** for responsive design.  
-- **Shadcn/UI** for modern, polished components.  
+Then open http://localhost:3000.
+
+| Script          | Description                  |
+| --------------- | ---------------------------- |
+| `npm run dev`   | Start the development server |
+| `npm run build` | Create a production build    |
+| `npm start`     | Serve the production build   |
+| `npm run lint`  | Run ESLint                   |
+
+## Project structure
+
+```
+src/
+├── app/          # App Router pages: home, recipes, recipes/[id], tag/[id], sitemap, robots
+├── components/   # UI components (recipe cards, pagination, search, theme toggle, skeletons, shadcn/ui)
+├── contexts/     # Theme provider
+├── data/         # Models, enums, constants and helpers
+├── hooks/        # Custom hooks
+├── lib/          # Utilities
+└── services/     # DummyJSON recipes API client
+```
