@@ -28,6 +28,7 @@ export function RenderedTimeAgo({ timestamp }: { timestamp: number }) {
 
   // update on page change
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- client-only time, avoids hydration mismatch
     setMsAgo(Date.now() - timestamp);
   }, [timestamp]);
 

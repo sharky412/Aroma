@@ -1,3 +1,5 @@
+@import "./_styles/main.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -71,5 +73,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-@import "./_styles/main.css"

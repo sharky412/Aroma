@@ -86,6 +86,7 @@ const Pagination = (props: PaginationPropsType) => {
     useEffect(() => {
 
         if (props?.currentPage) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect -- sync local state with prop
             setPageNumber(props?.currentPage)
         }
     }, [props?.currentPage])
