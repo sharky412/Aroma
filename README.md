@@ -8,6 +8,7 @@ A responsive food recipe app built with **Next.js 15** and **React 19**, using t
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)
 ![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-components-000000)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **Live demo:** https://aroma-shardul.vercel.app/
 
@@ -61,3 +62,7 @@ src/
 ├── lib/          # Utilities
 └── services/     # DummyJSON recipes API client
 ```
+
+## License
+
+Released under the [MIT License](LICENSE).
